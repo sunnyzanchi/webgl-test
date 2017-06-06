@@ -7,7 +7,7 @@ export default function initBuffer(gl: WebGLRenderingContext, positionsLocation:
   gl.bindBuffer(gl.ARRAY_BUFFER, positionsBuffer);
 
   const vertices = getRadialPositions(6, 0, 0);
-  vertices.push(vertices[0], vertices[1]);
+  vertices.push(vertices[0], vertices[1], vertices[2], vertices[3]);
 
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
 
@@ -19,6 +19,8 @@ export default function initBuffer(gl: WebGLRenderingContext, positionsLocation:
   gl.bindBuffer(gl.ARRAY_BUFFER, colorsBuffer);
 
   const colors = [
+    255, 111, 0,  1,
+    255, 213, 79, 1,
     255, 111, 0,  1,
     255, 213, 79, 1,
     255, 111, 0,  1,
