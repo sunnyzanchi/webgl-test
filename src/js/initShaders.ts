@@ -17,7 +17,7 @@ export function getAttributeLocations(gl: WebGLRenderingContext, program: WebGLP
   return {positions, colors};
 }
 
-export function createShader (gl: WebGLRenderingContext, sourceCode: string, type: number) {
+export function createShader(gl: WebGLRenderingContext, sourceCode: string, type: GLenum){
   // Compiles either a shader of type gl.VERTEX_SHADER or gl.FRAGMENT_SHADER
   var shader = gl.createShader( type );
   gl.shaderSource( shader, sourceCode );

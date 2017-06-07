@@ -1,6 +1,6 @@
 import getRadialPositions from './getRadialPositions';
 
-export default function initBuffer(gl: WebGLRenderingContext, positionsLocation: number, colorsLocation: number){
+export default function initBuffer(gl: WebGLRenderingContext, positionsLocation: GLint, colorsLocation: GLint){
 
   //Vertex positions
   const positionsBuffer = gl.createBuffer();
