@@ -1,13 +1,11 @@
-import getRadialPositions from './getRadialPositions';
-
+import getPolygonPoints from './getPolygonPoints';
 export default function initBuffer(gl: WebGLRenderingContext, positionsLocation: GLint, colorsLocation: GLint){
 
   //Vertex positions
   const positionsBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, positionsBuffer);
 
-  const vertices = getRadialPositions(6, 0, 0);
-  vertices.push(vertices[0], vertices[1], vertices[2], vertices[3]);
+  const vertices = getPolygonPoints(8);
 
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
 
